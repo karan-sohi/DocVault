@@ -1,0 +1,166 @@
+.page { max-width: 760px; }
+
+.title { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+.subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 28px; }
+
+.form { display: flex; flex-direction: column; gap: 20px; }
+
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  background: var(--surface);
+}
+.dropzone:hover { border-color: var(--accent); }
+.dropzoneActive { border-color: var(--accent); background: var(--surface2); }
+.dropzoneFilled { border-style: solid; border-color: var(--success); padding: 20px 24px; }
+
+.dropContent { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.dropIcon { font-size: 2.5rem; color: var(--accent); }
+.dropContent p { font-size: 0.95rem; color: var(--text); }
+.dropHint { font-size: 0.78rem; color: var(--text-muted); }
+
+.filePreview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+}
+.fileEmoji { font-size: 2rem; }
+.fileName { font-weight: 600; font-size: 0.95rem; font-family: var(--mono); }
+.fileMeta { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.removeFile {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+.removeFile:hover { border-color: #ef4444; color: #ef4444; }
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.optional { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+
+.hint { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px; margin-top: -10px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+
+@media (max-width: 640px) {
+  .grid2, .grid3 { grid-template-columns: 1fr; }
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input, .select, .textarea {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 12px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+.input:focus, .select:focus, .textarea:focus { border-color: var(--accent); }
+.select option { background: var(--surface2); }
+.textarea { resize: vertical; font-family: var(--font); }
+
+.ruleBuilder {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.addRuleBtn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.addRuleBtn:hover { background: var(--accent); color: #fff; }
+
+.rulesList { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.ruleChip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+}
+.ruleChipDesc { color: var(--text-muted); font-size: 0.8rem; }
+.removeChip {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: color 0.15s;
+}
+.removeChip:hover { color: #ef4444; }
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.cancelBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: border-color 0.15s, color 0.15s;
+}
+.cancelBtn:hover { border-color: var(--text); color: var(--text); }
+
+.submitBtn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+.submitBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.submitBtn:hover:not(:disabled) { opacity: 0.85; }
