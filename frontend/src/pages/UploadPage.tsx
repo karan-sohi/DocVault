@@ -110,7 +110,7 @@ export default function UploadPage() {
         <div
           {...getRootProps()}
           className={`${styles.dropzone} ${isDragActive ? styles.dropzoneActive : ''} ${file ? styles.dropzoneFilled : ''}`}
-        >
+        > 
           <input {...getInputProps()} />
           {file ? (
             <div className={styles.filePreview}>
@@ -202,7 +202,7 @@ export default function UploadPage() {
               </div>
               {newRuleType === 'DEADLINE' ? (
                 <div className={styles.field}>
-                  <label>Deadline date/time</label>
+                  <label>Deadline date/time</label> 
                   <input
                     type="datetime-local"
                     className={styles.input}

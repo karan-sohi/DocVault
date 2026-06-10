@@ -24,7 +24,7 @@ export default function UsersPage() {
       .catch(() => toast.error('Failed to load users'))
       .finally(() => setLoading(false));
   };
-
+  
   useEffect(() => { load(); }, []);
 
   const handleAdd = async (e: React.FormEvent) => {
